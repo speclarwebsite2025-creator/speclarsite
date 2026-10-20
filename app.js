@@ -690,9 +690,31 @@ Available Commands:
   }
 
   /* --------------------------------------------------------------------------
-     8. FORM HANDLING
+     8. GOOGLE SHEETS / EXCEL LEAD DISPATCH & FORM HANDLING
      -------------------------------------------------------------------------- */
+  // Paste your Google Apps Script Web App URL below (see google-sheet-script.js for 2-min setup):
+  const GOOGLE_SHEET_WEBAPP_URL = window.SPECLAR_GOOGLE_SHEET_URL || '';
+
+  async function postLeadToGoogleSheet(data) {
+    if (!GOOGLE_SHEET_WEBAPP_URL) {
+      console.info('[SPECLAR Lead Capture] Logged locally. (Paste your Google Apps Script URL into app.js to sync with Google Sheet):', data);
+      return;
+    }
+    try {
+      await fetch(GOOGLE_SHEET_WEBAPP_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      console.log('[SPECLAR Lead Capture] Successfully dispatched to Google Sheet.');
+    } catch (err) {
+      console.warn('[SPECLAR Lead Capture] Network sync notification:', err);
+    }
+  }
+
   function initForm() {
+    // 1. Home Page Screen 13: Statement of Work (SOW) Intake Form
     const form = qs('#intake-form');
     if (form) {
       form.addEventListener('submit', (e) => {
@@ -700,8 +722,21 @@ Available Commands:
         const btn = form.querySelector('button[type="submit"]');
         const originalText = btn.innerHTML;
 
+        const payload = {
+          timestamp: new Date().toLocaleString(),
+          source: 'Home Page // SOW Intake Form',
+          organization: qs('#inp-org')?.value || 'N/A',
+          email: qs('#inp-email')?.value || 'N/A',
+          phone: qs('#inp-phone')?.value || 'N/A',
+          service: qs('#sel-service')?.value || 'vapt',
+          urgency: qs('#sel-urgency')?.value || 'scheduled',
+          scope: qs('#inp-scope')?.value || 'N/A'
+        };
+
         btn.disabled = true;
         btn.innerHTML = 'Securing Scoping Transmission...';
+
+        postLeadToGoogleSheet(payload);
 
         setTimeout(() => {
           btn.innerHTML = 'Transmission Verified & Logged ✓';
@@ -712,23 +747,90 @@ Available Commands:
             btn.disabled = false;
             btn.innerHTML = originalText;
             btn.style.backgroundColor = '';
-            showToast('Scoping Scope Verified', 'A Senior Security Architect will contact you within 4 hours with an executed Bilateral MNDA and custom Statement of Work.', 'success');
+            showToast('Scope Transmitted to Architects', 'Your scoping parameters have been logged. A Lead Security Architect will contact you within 4 hours with an executed Bilateral MNDA.', 'success');
           }, 1200);
-        }, 1000);
+        }, 800);
       });
     }
 
-    // Modal fast call request handling
-    const modalForm = qs('#assessment-modal .cds--modal__footer button.cds--btn--primary');
-    if (modalForm) {
-      modalForm.addEventListener('click', () => {
+    // 2. Contact Page: Fast Engagement Scoping Form
+    const quickForm = qs('#contact-quick-form');
+    if (quickForm) {
+      quickForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btn = quickForm.querySelector('button[type="submit"]');
+        const originalText = btn ? btn.innerHTML : '';
+
+        const payload = {
+          timestamp: new Date().toLocaleString(),
+          source: 'Contact Page // Fast Scope Form',
+          organization: qs('#quick-org')?.value || 'N/A',
+          email: qs('#quick-email')?.value || 'N/A',
+          phone: qs('#quick-phone')?.value || 'N/A',
+          service: qs('#quick-service')?.value || 'vapt',
+          urgency: 'Immediate',
+          scope: qs('#quick-scope')?.value || 'N/A'
+        };
+
+        if (btn) {
+          btn.disabled = true;
+          btn.innerHTML = '<span>Securing Scope Transmission...</span>';
+        }
+
+        postLeadToGoogleSheet(payload);
+
+        setTimeout(() => {
+          if (btn) {
+            btn.innerHTML = '<span>✓ Scope Dispatched! Architect Contacting You.</span>';
+            btn.style.background = '#24a148';
+          }
+          quickForm.reset();
+          showToast('Inquiry Transmitted', 'Your requirements have been logged in the dispatch queue. An Architect will respond within 4 hours.', 'success');
+
+          setTimeout(() => {
+            if (btn) {
+              btn.disabled = false;
+              btn.innerHTML = originalText || '<span>Submit Fast Scope Inquiry →</span>';
+              btn.style.background = '';
+            }
+          }, 4000);
+        }, 800);
+      });
+    }
+
+    // 3. Fast Scoping Call Modal (Across all pages)
+    const modalPrimaryBtn = qs('#assessment-modal .cds--modal__footer button.cds--btn--primary');
+    if (modalPrimaryBtn) {
+      modalPrimaryBtn.addEventListener('click', () => {
         const emailInput = qs('#mod-email');
+        const nameInput = qs('#mod-name');
+        const phoneInput = qs('#mod-phone');
+        const assetInput = qs('#mod-asset');
+
         if (emailInput && emailInput.value) {
           const email = emailInput.value;
+          const payload = {
+            timestamp: new Date().toLocaleString(),
+            source: 'Modal // Fast Scoping Call',
+            organization: nameInput?.value || 'N/A',
+            email: email,
+            phone: phoneInput?.value || 'N/A',
+            service: assetInput?.value || 'vapt',
+            urgency: 'Immediate (Fast Call)',
+            scope: 'Requested Fast Scoping Call with bilateral MNDA mandate'
+          };
+
+          postLeadToGoogleSheet(payload);
+
           emailInput.value = '';
+          if (nameInput) nameInput.value = '';
+          if (phoneInput) phoneInput.value = '';
+
           const modal = qs('#assessment-modal');
           if (modal) modal.classList.remove('is-visible');
-          showToast('Bilateral MNDA Initiated', `Fast scoping call requested for ${email}. MNDA template dispatched.`, 'success');
+          showToast('Bilateral MNDA Initiated', `Fast scoping call scheduled for ${email}. Lead Security Architect dispatched.`, 'success');
+        } else {
+          showToast('Input Required', 'Please provide a valid corporate work email address.', 'error');
         }
       });
     }
