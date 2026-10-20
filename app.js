@@ -692,8 +692,8 @@ Available Commands:
   /* --------------------------------------------------------------------------
      8. GOOGLE SHEETS / EXCEL LEAD DISPATCH & FORM HANDLING
      -------------------------------------------------------------------------- */
-  // Paste your Google Apps Script Web App URL below (see google-sheet-script.js for 2-min setup):
-  const GOOGLE_SHEET_WEBAPP_URL = window.SPECLAR_GOOGLE_SHEET_URL || '';
+  // Live Google Apps Script Web App URL (Speclar Website Leads):
+  const GOOGLE_SHEET_WEBAPP_URL = window.SPECLAR_GOOGLE_SHEET_URL || 'https://script.google.com/macros/s/AKfycbx3WBzt0mgqqtRc2xEvnu8-kQ1k9aSGEMvReKbRHewqoIIYpf7b-DPTokTM_by_RsMh/exec';
 
   async function postLeadToGoogleSheet(data) {
     if (!GOOGLE_SHEET_WEBAPP_URL) {
