@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="white">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About SPECLAR — Pure Cybersecurity Services & Offensive Defense Firm</title>
+  <meta name="description" content="Learn about Speclar Cyber Technologies: A dedicated cybersecurity professional services firm founded by Ashwin Ragav. Specialized in manual VAPT, 24/7 Managed SOC, and GRC compliance. We do not sell automated software." />
+  <meta name="keywords" content="Speclar, About Speclar, Ashwin Ragav, cybersecurity services, VAPT firm, 24/7 SOC provider, GRC compliance, ISO 27001, OSCP, Tamil Nadu, Chennai, India" />
+
+  <!-- IBM Plex Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Core Carbon & Liquid Display Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .cds--breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--cds-font-mono);
+      font-size: 0.75rem;
+      color: var(--cds-text-helper);
+      margin-bottom: 24px;
+      letter-spacing: 0.5px;
+    }
+    .cds--breadcrumb a {
+      color: var(--cds-interactive-01);
+      text-decoration: none;
+    }
+    .cds--breadcrumb a:hover {
+      text-decoration: underline;
+    }
+    .cds--leadership-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+    @media (max-width: 1024px) {
+      .cds--leadership-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 680px) {
+      .cds--leadership-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .cds--leader-card {
+      background: var(--liquid-bg);
+      border: 1px solid var(--liquid-border);
+      box-shadow: var(--liquid-shadow);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 32px 28px;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s ease;
+    }
+    .cds--leader-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(15, 98, 254, 0.35);
+      box-shadow: var(--liquid-shadow-hover);
+    }
+    .cds--leader-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #0f62fe, #4589ff);
+    }
+    .cds--leader-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 4px;
+      background: #000000;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-family: var(--cds-font-mono);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    .cds--cred-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--cds-font-mono);
+      font-size: 0.6875rem;
+      padding: 4px 10px;
+      background: var(--cds-layer-02);
+      border: 1px solid var(--cds-border-subtle);
+      border-radius: 3px;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+    .cds--manifesto-box {
+      background: var(--cds-layer-01);
+      border: 1px solid var(--cds-border-subtle);
+      border-left: 4px solid var(--cds-interactive-01);
+      padding: 32px;
+      margin-top: 28px;
+    }
+  </style>
+</head>
+<body class="cds--theme-carbon">
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress-bar" style="position: fixed; top: 0; left: 0; height: 3px; background: #0f62fe; width: 0%; z-index: 10000; transition: width 0.1s linear;"></div>
+
+  <!-- 24/7 Hotline Bar -->
+  <div class="cds--emergency-hotline-bar" role="region" aria-label="Incident Response Hotline">
+    <div>
+      <span style="background: #da1e28; color: #fff; padding: 2px 8px; font-weight: 700; font-size: 0.625rem; letter-spacing: 1px;">24/7 EMERGENCY</span>
+      <strong>ACTIVE BREACH OR EXPLOIT OUTBREAK?</strong> Direct Incident Commander Hotline:
+      <a href="tel:+919345827775" style="color: #78a9ff; margin-left: 6px; text-decoration: underline;">+91 9345827775</a>
+    </div>
+    <div>
+      <span style="color: #6f6f6f;">Guaranteed &lt; 14-Minute Triage SLA</span>
+      <a href="contact.html#quick-intake" style="margin-left: 12px; color: #78a9ff;">Initiate Emergency Breach SOW →</a>
+    </div>
+  </div>
+
+  <!-- Pure Consulting Notice Bar -->
+  <div class="cds--top-notice-bar" role="region" aria-label="Service Provider Model Notice">
+    <div>
+      <span class="cds--pulse-indicator" style="background: #24a148; width: 8px; height: 8px; display: inline-block; border-radius: 50%; margin-right: 8px;"></span>
+      <strong>PURE CYBERSECURITY SERVICES FIRM:</strong> Speclar provides manual VAPT, 24/7 Managed SOC, and GRC Consulting. We do not sell automated SaaS products.
+    </div>
+    <div>
+      <span style="color: var(--cds-text-helper); margin-right: 12px;">Executive Contact: ceo@speclar.com</span>
+      <a href="contact.html" style="color: var(--cds-link-primary); font-weight: 600;">+91 9345827775 →</a>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       CARBON UI SHELL (Global Header)
+       ======================================================================== -->
+  <header class="cds--header" role="banner">
+    <div class="cds--header__left">
+      <button id="menu-trigger" class="cds--header__menu-trigger" aria-label="Toggle navigation drawer">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+          <rect y="3" width="20" height="2"/>
+          <rect y="9" width="20" height="2"/>
+          <rect y="15" width="20" height="2"/>
+        </svg>
+      </button>
+
+      <!-- SPECLAR LOGO MARK -->
+      <a href="index.html" class="cds--header__brand" aria-label="SPECLAR Homepage">
+        <div class="cds--logo-mark">
+          <img src="speclar-logo.png" alt="SPECLAR" class="speclar-brand-logo-img" />
+        </div>
+        <span class="cds--header__brand-product">Cybersecurity Services</span>
+      </a>
+
+      <!-- Global Navigation -->
+      <nav class="cds--header__nav" aria-label="Main Navigation">
+        <ul class="cds--header__nav-list">
+          <li class="cds--header__nav-item"><a href="index.html" class="cds--header__nav-link">Overview</a></li>
+          <li class="cds--header__nav-item"><a href="vapt.html" class="cds--header__nav-link">Offensive VAPT</a></li>
+          <li class="cds--header__nav-item"><a href="soc.html" class="cds--header__nav-link">24/7 SOC</a></li>
+          <li class="cds--header__nav-item"><a href="grc.html" class="cds--header__nav-link">GRC & Audit</a></li>
+          <li class="cds--header__nav-item"><a href="case-studies.html" class="cds--header__nav-link">Case Studies</a></li>
+          <li class="cds--header__nav-item"><a href="about.html" class="cds--header__nav-link active">About Speclar</a></li>
+          <li class="cds--header__nav-item"><a href="contact.html" class="cds--header__nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Header Actions -->
+    <div class="cds--header__actions">
+      <button id="btn-theme-toggle" class="cds--header__action-btn" aria-label="Toggle Theme" title="Toggle White/Dark Theme">
+        <svg viewBox="0 0 32 32">
+          <path d="M16 2a14 14 0 1 0 14 14A14.016 14.016 0 0 0 16 2zm0 26a12 12 0 1 1 12-12 12.013 12.013 0 0 1-12 12z"/>
+          <path d="M16 4v24a12 12 0 0 0 0-24z"/>
+        </svg>
+      </button>
+      <button class="cds--header__action-btn" data-modal-target="assessment-modal" aria-label="Fast Scoping Request" title="Fast Scoping Request (Mutual NDA)">
+        <svg viewBox="0 0 32 32">
+          <path d="M28 4H4a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 22H4V6h24z"/>
+          <path d="m9 11 5 5-5 5 1.4 1.4 6.4-6.4-6.4-6.4zm8 10h6v2h-6z"/>
+        </svg>
+      </button>
+      <button class="cds--header__action-btn" aria-label="SOC Status" title="24/7 Managed SOC Online — MTTR < 14 Min">
+        <svg viewBox="0 0 32 32">
+          <path d="M28.707 19.293L26 16.586V13a10.014 10.014 0 0 0-9-9.949V1h-2v2.051A10.014 10.014 0 0 0 6 13v3.586l-2.707 2.707A1 1 0 0 0 3 20v3a1 1 0 0 0 1 1h7.051a5.006 5.006 0 0 0 9.898 0H28a1 1 0 0 0 1-1v-3a1 1 0 0 0-.293-.707zM16 28a3 3 0 0 1-2.816-2h5.632A3 3 0 0 1 16 28zm11-6H5v-1.586l2.707-2.707A1 1 0 0 0 8 17v-4a8 8 0 0 1 16 0v4a1 1 0 0 0 .293.707L27 20.414z"/>
+        </svg>
+        <span class="cds--status-indicator" title="24/7 SOC Online"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Side Nav Drawer -->
+  <aside id="side-nav" class="cds--side-nav" aria-label="Side Navigation Drawer">
+    <ul class="cds--side-nav__items">
+      <li><a href="index.html" class="cds--side-nav__link">00 // Home Overview</a></li>
+      <li><a href="vapt.html" class="cds--side-nav__link">01 // Offensive VAPT</a></li>
+      <li><a href="soc.html" class="cds--side-nav__link">02 // 24/7 Managed SOC</a></li>
+      <li><a href="grc.html" class="cds--side-nav__link">03 // GRC & Compliance</a></li>
+      <li><a href="case-studies.html" class="cds--side-nav__link">04 // Enterprise Case Studies</a></li>
+      <li><a href="about.html" class="cds--side-nav__link active">05 // About Speclar & Leadership</a></li>
+      <li><a href="contact.html" class="cds--side-nav__link">06 // Contact & Dispatch</a></li>
+    </ul>
+    <div class="cds--side-nav__footer">
+      <div>SPECLAR PROFESSIONAL SERVICES</div>
+      <div style="margin-top: 4px; color: #4589ff;">Founder: Ashwin Ragav</div>
+    </div>
+  </aside>
+  <div id="overlay" class="cds--overlay" aria-hidden="true"></div>
+
+  <!-- ========================================================================
+       MAIN ABOUT CONTENT
+       ======================================================================== -->
+  <main style="padding-top: 96px;">
+
+    <!-- SECTION 1: LEADSPACE -->
+    <section class="cds--screen" style="padding-top: 20px;">
+      <div class="cds--grid">
+        <div class="cds--breadcrumb">
+          <a href="index.html">HOME</a>
+          <span>/</span>
+          <span>ABOUT SPECLAR</span>
+          <span>/</span>
+          <span style="color: var(--cds-text-primary);">COMPANY & LEADERSHIP</span>
+        </div>
+
+        <div class="cds--screen-header framer-reveal">
+          <div class="cds--screen-meta">
+            <span class="cds--screen-number">COMPANY PROFILE</span>
+            <span>PURE OFFENSIVE & DEFENSIVE CONSULTING // EST. TAMIL NADU, INDIA</span>
+          </div>
+          <h1 class="cds--display-heading" style="font-size: clamp(2.25rem, 5vw, 3.75rem); max-width: 960px;">
+            The elite cybersecurity services firm <strong>engineered for high-stakes defense</strong>.
+          </h1>
+          <p class="cds--display-subtitle" style="max-width: 840px;">
+            Speclar was founded by <strong>Ashwin Ragav</strong> on an uncompromising thesis: automated scanning tools and commodity Big-4 consulting cannot defend modern enterprises against motivated human adversaries. We deploy certified ethical hackers, 24/7 dedicated threat hunters, and lead auditors to defend critical digital infrastructure across India and globally.
+          </p>
+        </div>
+
+        <!-- Liquid Bento KPI Summary -->
+        <div class="liquid-bento-grid framer-scale delay-1">
+          <div class="liquid-display-tile liquid-display-tile--blue liquid-tile--col-3" style="min-height: 180px;">
+            <div class="liquid-tile__code">METRIC // VOLUME</div>
+            <div style="font-size: 2.75rem; font-weight: 700; color: var(--cds-interactive-01); line-height: 1;">500+</div>
+            <div style="font-size: 0.875rem; font-weight: 600; margin-top: 8px;">Audits & Assessments Delivered</div>
+            <p style="font-size: 0.75rem; color: var(--cds-text-secondary); margin-top: 4px;">Web apps, mobile binaries, APIs, Kubernetes, and enterprise clouds.</p>
+          </div>
+
+          <div class="liquid-display-tile liquid-display-tile--green liquid-tile--col-3" style="min-height: 180px;">
+            <div class="liquid-tile__code">METRIC // QUALITY</div>
+            <div style="font-size: 2.75rem; font-weight: 700; color: #198038; line-height: 1;">0%</div>
+            <div style="font-size: 0.875rem; font-weight: 600; margin-top: 8px;">False Positive Guarantee</div>
+            <p style="font-size: 0.75rem; color: var(--cds-text-secondary); margin-top: 4px;">Every single vulnerability is humanly verified and reproduced with PoC diffs.</p>
+          </div>
+
+          <div class="liquid-display-tile liquid-display-tile--vapt liquid-tile--col-3" style="min-height: 180px;">
+            <div class="liquid-tile__code">METRIC // VELOCITY</div>
+            <div style="font-size: 2.75rem; font-weight: 700; color: #da1e28; line-height: 1;">&lt; 14m</div>
+            <div style="font-size: 0.875rem; font-weight: 600; margin-top: 8px;">Average Triage SLA</div>
+            <p style="font-size: 0.75rem; color: var(--cds-text-secondary); margin-top: 4px;">Guaranteed containment SLA for active breaches and ransomware outbreaks.</p>
+          </div>
+
+          <div class="liquid-display-tile liquid-display-tile--purple liquid-tile--col-3" style="min-height: 180px;">
+            <div class="liquid-tile__code">METRIC // METHODOLOGY</div>
+            <div style="font-size: 2.75rem; font-weight: 700; color: #6929c4; line-height: 1;">100%</div>
+            <div style="font-size: 0.875rem; font-weight: 600; margin-top: 8px;">Manual Exploitation & Logic</div>
+            <p style="font-size: 0.75rem; color: var(--cds-text-secondary); margin-top: 4px;">Targeting business logic, auth bypass, and multi-step privilege escalation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: THE PURE SERVICES MANIFESTO -->
+    <section class="cds--screen" style="background: var(--cds-layer-01);">
+      <div class="cds--grid">
+        <div class="cds--screen-header framer-reveal">
+          <div class="cds--screen-meta">
+            <span class="cds--screen-number">OUR MANIFESTO</span>
+            <span>WHY SPECLAR DOES NOT SELL SOFTWARE OR AUTOMATED SCANNERS</span>
+          </div>
+          <h2 class="cds--display-heading">
+            Why we are <strong>100% services-driven</strong> and never a software product company.
+          </h2>
+          <p class="cds--display-subtitle">
+            The cybersecurity market is saturated with automated scanner tools that claim to protect enterprises with a button click. Real adversaries do not use automated buttons — they exploit human logic flaws, race conditions, and architectural oversights.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;" class="framer-scale delay-1">
+          <!-- The Problem with Commodity Tools -->
+          <div style="background: var(--cds-ui-background); border: 1px solid var(--cds-border-subtle); padding: 32px; border-top: 3px solid #da1e28;">
+            <div style="font-family: var(--cds-font-mono); font-size: 0.6875rem; color: #da1e28; letter-spacing: 1px; font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">
+              THE COMMODITY AUTOMATION TRAP
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 14px;">The Failure of Automated Scanner SaaS</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 0.875rem; color: var(--cds-text-secondary);">
+              <li style="display: flex; gap: 10px;">
+                <span style="color: #da1e28; font-weight: 700;">✕</span>
+                <span><strong>Misses 70% of Real Criticals:</strong> Scanners cannot understand multi-tenant business logic, authorization token tampering, or contextual IDORs.</span>
+              </li>
+              <li style="display: flex; gap: 10px;">
+                <span style="color: #da1e28; font-weight: 700;">✕</span>
+                <span><strong>Drowns Devs in Noise:</strong> 40%+ false positive rates that waste hundreds of engineering hours sorting through junk warnings.</span>
+              </li>
+              <li style="display: flex; gap: 10px;">
+                <span style="color: #da1e28; font-weight: 700;">✕</span>
+                <span><strong>Zero Contextual Guidance:</strong> Automated exports provide generic CVE descriptions without specific code remediation diffs for your framework.</span>
+              </li>
+              <li style="display: flex; gap: 10px;">
+                <span style="color: #da1e28; font-weight: 700;">✕</span>
+                <span><strong>Check-the-box Illusion:</strong> Yields a false sense of security while leaving open lateral attack paths that lead to catastrophic breaches.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- The Speclar Approach -->
+          <div style="background: var(--cds-ui-background); border: 1px solid var(--cds-border-subtle); padding: 32px; border-top: 3px solid #0f62fe;">
+            <div style="font-family: var(--cds-font-mono); font-size: 0.6875rem; color: #0f62fe; letter-spacing: 1px; font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">
+              THE SPECLAR ADVANTAGE
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 14px;">Boutique Rigor & Lead Hacker Deployment</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 0.875rem; color: var(--cds-text-secondary);">
+              <li style="display: flex; gap: 10px;">
+                <span style="color: #24a148; font-weight: 700;">✓</span>
+                <span><strong>100% Certified Human Offensive Testers:</strong> OSCP and OSCE-certified ethical hackers manually dissect every endpoint, workflow, and auth barrier.</span>
+              </li>
+              <li style="display: flex; gap: 10px;">
+                <span style="color: #24a148; font-weight: 700;">✓</span>
+                <span><strong>0% False Positive Guarantee:</strong> Every finding is proven with a verified non-destructive proof-of-concept before reaching the client.</span>
+              </li>
+              <li style="display: flex; gap: 10px;">
+                <span style="color: #24a148; font-weight: 700;">✓</span>
+                <span><strong>Developer-Ready Code Remediation:</strong> Exact code diffs, configuration adjustments, and architecture recommendations included in every deliverable.</span>
+              </li>
+              <li style="display: flex; gap: 10px;">
+                <span style="color: #24a148; font-weight: 700;">✓</span>
+                <span><strong>Free 30-Day Retesting:</strong> Direct engineer access via dedicated Slack or Microsoft Teams channels until all vulnerabilities are sealed.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: LEADERSHIP & GUILD ARCHITECTURE -->
+    <section class="cds--screen" id="leadership">
+      <div class="cds--grid">
+        <div class="cds--screen-header framer-reveal">
+          <div class="cds--screen-meta">
+            <span class="cds--screen-number">LEADERSHIP & GUILD</span>
+            <span>SECURITY ARCHITECTS // ETHICAL HACKERS // LEAD AUDITORS</span>
+          </div>
+          <h2 class="cds--display-heading">
+            Led by seasoned <strong>cybersecurity practitioners</strong>.
+          </h2>
+          <p class="cds--display-subtitle">
+            Our leadership team doesn't sit in corporate bureaucracy. We are hands-on offensive security researchers, SOC detection engineers, and ISO lead auditors with over a decade of combat-tested experience.
+          </p>
+        </div>
+
+        <div class="cds--leadership-grid framer-scale delay-1">
+          <!-- Founder Card -->
+          <div class="cds--leader-card" style="border-top: 3px solid var(--cds-interactive-01);">
+            <div class="cds--leader-avatar" style="background: #000000; border: 1px solid rgba(255,255,255,0.2);">
+              AR
+            </div>
+            <div style="font-family: var(--cds-font-mono); font-size: 0.6875rem; color: var(--cds-interactive-01); letter-spacing: 1px; font-weight: 600; text-transform: uppercase;">
+              FOUNDER & LEAD SECURITY ARCHITECT
+            </div>
+            <h3 style="font-size: 1.375rem; font-weight: 600; margin: 6px 0 12px;">Ashwin Ragav</h3>
+            <p style="font-size: 0.8125rem; color: var(--cds-text-secondary); line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+              Founder and Chief Executive Architect at Speclar. Drives the technical vision of zero-false-positive offensive penetration testing and 24/7 managed defense. Personally oversees high-stakes financial sector audits, cloud infrastructure engagements, and incident commander escalations across APAC, Middle East, and North America.
+            </p>
+            <div style="border-top: 1px solid var(--cds-border-subtle); padding-top: 16px;">
+              <span class="cds--cred-badge">OSCP</span>
+              <span class="cds--cred-badge">CLOUD SECURITY</span>
+              <span class="cds--cred-badge">RED TEAM EMULATION</span>
+              <span class="cds--cred-badge">ADVISORY LEAD</span>
+            </div>
+          </div>
+
+          <!-- Practice Director: Offensive VAPT -->
+          <div class="cds--leader-card" style="border-top: 3px solid #da1e28;">
+            <div class="cds--leader-avatar" style="background: #161616;">
+              RH
+            </div>
+            <div style="font-family: var(--cds-font-mono); font-size: 0.6875rem; color: #da1e28; letter-spacing: 1px; font-weight: 600; text-transform: uppercase;">
+              PRACTICE DIRECTOR // OFFENSIVE GUILD
+            </div>
+            <h3 style="font-size: 1.375rem; font-weight: 600; margin: 6px 0 12px;">Offensive VAPT & Red Team Lead</h3>
+            <p style="font-size: 0.8125rem; color: var(--cds-text-secondary); line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+              Leads Speclar's offensive exploitation squad. Directs deep manual testing across complex web microservices, iOS/Android runtime hooks (MASVS), Kubernetes clusters, Active Directory attack paths, and zero-day attack simulations for Fortune 500 banks and SaaS scale-ups.
+            </p>
+            <div style="border-top: 1px solid var(--cds-border-subtle); padding-top: 16px;">
+              <span class="cds--cred-badge">OSCP / OSCE3</span>
+              <span class="cds--cred-badge">MASVS MOBILE</span>
+              <span class="cds--cred-badge">K8s BREAKOUT</span>
+              <span class="cds--cred-badge">MITRE ATT&CK</span>
+            </div>
+          </div>
+
+          <!-- Practice Director: 24/7 SOC & GRC -->
+          <div class="cds--leader-card" style="border-top: 3px solid #198038;">
+            <div class="cds--leader-avatar" style="background: #161616;">
+              GR
+            </div>
+            <div style="font-family: var(--cds-font-mono); font-size: 0.6875rem; color: #198038; letter-spacing: 1px; font-weight: 600; text-transform: uppercase;">
+              PRACTICE DIRECTOR // SOC & COMPLIANCE
+            </div>
+            <h3 style="font-size: 1.375rem; font-weight: 600; margin: 6px 0 12px;">SOC Telemetry & Audit Director</h3>
+            <p style="font-size: 0.8125rem; color: var(--cds-text-secondary); line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+              Heads the 24/7/365 Global Security Operations Center and GRC Advisory Practice. Specializes in multi-cloud SIEM/XDR correlation (Sentinel, Splunk, CrowdStrike), guaranteed 15-minute triage SLAs, and turnkey audit defense for ISO/IEC 27001:2022, SOC 2 Type II, and CERT-In mandates.
+            </p>
+            <div style="border-top: 1px solid var(--cds-border-subtle); padding-top: 16px;">
+              <span class="cds--cred-badge">CISSP</span>
+              <span class="cds--cred-badge">ISO 27001 LA</span>
+              <span class="cds--cred-badge">CISA</span>
+              <span class="cds--cred-badge">CERT-In EMPANELMENT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: CERTIFICATIONS & AUDIT BENCHMARKS -->
+    <section class="cds--screen" id="certifications" style="background: var(--cds-layer-01);">
+      <div class="cds--grid">
+        <div class="cds--screen-header framer-reveal">
+          <div class="cds--screen-meta">
+            <span class="cds--screen-number">CREDENTIALS & AUDIT BENCHMARKS</span>
+            <span>GLOBALLY ACCREDITED // STRICT TECHNICAL RIGOR</span>
+          </div>
+          <h2 class="cds--display-heading">
+            Certified technical credentials and <strong>industry standards</strong>.
+          </h2>
+          <p class="cds--display-subtitle">
+            Our consulting delivery and testing methodologies conform to the world's most demanding cybersecurity and regulatory frameworks.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;" class="framer-scale delay-1">
+          <div style="background: var(--cds-ui-background); border: 1px solid var(--cds-border-subtle); padding: 24px; border-radius: 4px;">
+            <div style="font-family: var(--cds-font-mono); font-size: 0.625rem; color: var(--cds-text-helper); letter-spacing: 1px;">OFFENSIVE RIGOR</div>
+            <h4 style="font-size: 1rem; font-weight: 600; margin: 6px 0 8px;">OSCP & OSCE Certified</h4>
+            <p style="font-size: 0.75rem; color: var(--cds-text-secondary);">100% of lead penetration testers hold verified 24-hour hands-on offensive certifications from Offensive Security.</p>
+          </div>
+
+          <div style="background: var(--cds-ui-background); border: 1px solid var(--cds-border-subtle); padding: 24px; border-radius: 4px;">
+            <div style="font-family: var(--cds-font-mono); font-size: 0.625rem; color: var(--cds-text-helper); letter-spacing: 1px;">GOVERNANCE STANDARD</div>
+            <h4 style="font-size: 1rem; font-weight: 600; margin: 6px 0 8px;">ISO/IEC 27001:2022</h4>
+            <p style="font-size: 0.75rem; color: var(--cds-text-secondary);">Accredited Lead Auditors delivering Gap Assessments, ISMS implementation, and Stage 1/Stage 2 external audit facilitation.</p>
+          </div>
+
+          <div style="background: var(--cds-ui-background); border: 1px solid var(--cds-border-subtle); padding: 24px; border-radius: 4px;">
+            <div style="font-family: var(--cds-font-mono); font-size: 0.625rem; color: var(--cds-text-helper); letter-spacing: 1px;">FINANCIAL ASSURANCE</div>
+            <h4 style="font-size: 1rem; font-weight: 600; margin: 6px 0 8px;">SOC 2 Type II Readiness</h4>
+            <p style="font-size: 0.75rem; color: var(--cds-text-secondary);">AICPA Trust Services Criteria (Security, Availability, Confidentiality) evidence collection and remediation advisory.</p>
+          </div>
+
+          <div style="background: var(--cds-ui-background); border: 1px solid var(--cds-border-subtle); padding: 24px; border-radius: 4px;">
+            <div style="font-family: var(--cds-font-mono); font-size: 0.625rem; color: var(--cds-text-helper); letter-spacing: 1px;">NATIONAL COMPLIANCE</div>
+            <h4 style="font-size: 1rem; font-weight: 600; margin: 6px 0 8px;">CERT-In & DPDPA 2023</h4>
+            <p style="font-size: 0.75rem; color: var(--cds-text-secondary);">Cyber Security Directions 2022 mandate alignment, log preservation audit, and India Digital Personal Data Protection Act compliance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: REGISTERED ENTITY & GLOBAL DISPATCH -->
+    <section class="cds--screen" id="entity-details">
+      <div class="cds--grid">
+        <div class="cds--screen-header framer-reveal">
+          <div class="cds--screen-meta">
+            <span class="cds--screen-number">CORPORATE ENTITY</span>
+            <span>LEGAL STRUCTURE // GLOBAL FACILITIES // CRYPTOGRAPHIC VERIFICATION</span>
+          </div>
+          <h2 class="cds--display-heading">
+            Corporate governance and <strong>global delivery facilities</strong>.
+          </h2>
+          <p class="cds--display-subtitle">
+            Speclar operates as a legally incorporated professional services firm, offering bilateral non-disclosure protections and secure, air-gapped forensic handling.
+          </p>
+        </div>
+
+        <div class="liquid-bento-grid framer-scale delay-1">
+          <!-- Corporate Details Tile -->
+          <div class="liquid-display-tile liquid-display-tile--hero liquid-tile--col-6">
+            <div class="liquid-tile__code">
+              LEGAL STATUS // INCORPORATION
+              <div class="liquid-tile__icon"><svg viewBox="0 0 32 32"><path d="M26 6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm0 18H6V8h20z"/></svg></div>
+            </div>
+            <h3 class="liquid-tile__heading">Speclar Cyber Technologies Pvt. Ltd.</h3>
+            <p class="liquid-tile__copy">
+              Officially incorporated under the Companies Act in Tamil Nadu, India. Operating as a pure cybersecurity professional services and managed security defense firm.
+            </p>
+
+            <div style="background: var(--cds-layer-02); border: 1px solid var(--cds-border-subtle); padding: 16px; border-radius: 4px; font-size: 0.8125rem; display: flex; flex-direction: column; gap: 8px;">
+              <div><strong>Registered Legal Entity:</strong> Speclar Cyber Technologies Private Limited</div>
+              <div><strong>State of Incorporation:</strong> Tamil Nadu, India</div>
+              <div><strong>Principal Executive Officer:</strong> Ashwin Ragav (Founder & Executive Director)</div>
+              <div><strong>Core Activity Code:</strong> Professional, Scientific and Technical Cybersecurity Services</div>
+              <div><strong>Primary Delivery Hub:</strong> West Mambalam, Chennai, Tamil Nadu, 600033, India</div>
+            </div>
+
+            <div style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap;">
+              <a href="speclar-bilateral-mnda.pdf" download="speclar-bilateral-mnda.pdf" class="cds--btn cds--btn--secondary cds--btn--sm">
+                <svg viewBox="0 0 16 16" style="width: 14px; height: 14px; fill: currentColor; margin-right: 6px;"><path d="M13 12v2H3v-2H1v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2zM8 11l4-4-1.4-1.4L8.5 7.7V1h-2v6.7L4.4 5.6 3 7z"/></svg>
+                <span>Download Bilateral MNDA (PDF)</span>
+              </a>
+              <a href="speclar-pgp-key.asc" download="speclar-pgp-key.asc" class="cds--btn cds--btn--ghost cds--btn--sm">
+                <span>Download PGP Public Key (.asc)</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Facility & Security Operations Command -->
+          <div class="liquid-display-tile liquid-display-tile--green liquid-tile--col-6">
+            <div class="liquid-tile__code">
+              OPERATIONS // COMMAND CENTER & LABS
+              <div class="liquid-tile__icon"><svg viewBox="0 0 32 32"><path d="M16 2A10.014 10.014 0 0 0 6 12c0 7 10 18 10 18s10-11 10-18A10.014 10.014 0 0 0 16 2zm0 14a4 4 0 1 1 4-4 4.005 4.005 0 0 1-4 4z"/></svg></div>
+            </div>
+            <h3 class="liquid-tile__heading">Security Operations Center & Hardware Lab</h3>
+            <p class="liquid-tile__copy">
+              24/7/365 continuous operations delivering manual offensive security testing, real-time SOC incident telemetry, and sovereign compliance defense.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <div class="liquid-hub-item" style="border-left: 3px solid #198038;">
+                <div class="liquid-hub-item__header">
+                  <span class="liquid-hub-item__name">Headquarters & Tier-3 SOC</span>
+                  <span class="liquid-hub-item__tz">IST // UTC+5:30</span>
+                </div>
+                <div class="liquid-hub-item__desc">
+                  West Mambalam, Chennai, Tamil Nadu, 600033, India · 24/7/365 eyes-on-glass monitoring, rapid incident triage, and specialized red team lab.
+                </div>
+              </div>
+
+              <div class="liquid-hub-item">
+                <div class="liquid-hub-item__header">
+                  <span class="liquid-hub-item__name">Offensive Research Guild</span>
+                  <span class="liquid-hub-item__tz">OSCP / OSCE</span>
+                </div>
+                <div class="liquid-hub-item__desc">
+                  Bespoke manual business logic analysis, zero-day exploit verification, and cloud privilege escalation research.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: CALL TO ACTION -->
+    <section class="cds--screen" style="background: var(--cds-layer-01); border-top: 1px solid var(--cds-border-subtle);">
+      <div class="cds--grid">
+        <div style="text-align: center; max-width: 720px; margin: 0 auto;" class="framer-reveal">
+          <div class="liquid-brand-badge" style="margin-bottom: 24px;">
+            <img src="speclar-logo.png" alt="SPECLAR" />
+          </div>
+          <h2 class="cds--display-heading" style="font-size: 2.25rem;">
+            Ready to secure your enterprise with <strong>certified elite defenders</strong>?
+          </h2>
+          <p class="cds--display-subtitle" style="margin-bottom: 32px;">
+            Execute a bilateral MNDA and schedule a confidential scoping discussion with our Lead Security Architects today. Fixed-price SOW delivered within 4 hours.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+            <button data-modal-target="assessment-modal" class="cds--btn cds--btn--primary">
+              <span>Request Scoping Call (Under MNDA)</span>
+              <svg viewBox="0 0 16 16"><path d="M10.5 3.5 9.8 4.2 12.6 7H2v1h10.6L9.8 10.8l.7.7 4-4z"/></svg>
+            </button>
+            <a href="index.html#screen-estimator" class="cds--btn cds--btn--secondary">
+              <span>Open Scoping Studio</span>
+            </a>
+            <a href="index.html#screen-contact" class="cds--btn cds--btn--ghost">
+              <span>View Global Contact Center →</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       PREMIUM FOOTER
+       ======================================================================== -->
+  <footer class="cds--footer" role="contentinfo">
+    <div class="cds--footer__top-bar">
+      <div class="cds--grid">
+        <div class="cds--footer__columns">
+
+          <!-- Brand Block -->
+          <div>
+            <div class="cds--footer__brand-block">
+              <div class="cds--footer__logo-mark" style="background: transparent; padding: 0;">
+                <img src="speclar-logo.png" alt="SPECLAR" class="speclar-brand-logo-img--footer" />
+              </div>
+            </div>
+            <p class="cds--footer__tagline">
+              Leading cybersecurity professional services firm. Delivering manual VAPT, 24/7 Managed SOC, and GRC audit readiness worldwide.
+            </p>
+
+            <div class="cds--footer__contact-block">
+              <div class="cds--footer__contact-item">
+                <svg viewBox="0 0 16 16"><path d="M14.95 10.65 12.44 8.14a1 1 0 0 0-1.41 0l-1.42 1.42a.5.5 0 0 1-.63.07 8.65 8.65 0 0 1-2.55-2.55.5.5 0 0 1 .07-.63L7.92 5a1 1 0 0 0 0-1.41L5.41 1.09a1 1 0 0 0-1.41 0L2.59 2.5A2 2 0 0 0 2 3.93a12 12 0 0 0 12 12 2 2 0 0 0 1.43-.59l1.41-1.41a1 1 0 0 0 0-1.41z"/></svg>
+                <div>
+                  <a href="tel:+919345827775">+91 9345827775 (Direct Line / 24/7 Hotline)</a>
+                </div>
+              </div>
+              <div class="cds--footer__contact-item">
+                <svg viewBox="0 0 16 16"><path d="M14 3H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1.15 2-4.35 3.5L4.15 5zm.15 7H3V6.2l4.5 3.6a1 1 0 0 0 1.25 0L13 6.2z"/></svg>
+                <div>
+                  <a href="mailto:ceo@speclar.com">ceo@speclar.com</a>
+                </div>
+              </div>
+              <div class="cds--footer__contact-item">
+                <svg viewBox="0 0 16 16"><path d="M8 1a5 5 0 1 0 0 10A5 5 0 0 0 8 1zm0 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm.5-5h-1v3h1zm0-2h-1v1h1z"/></svg>
+                <span>West Mambalam, Chennai, Tamil Nadu, 600033, India</span>
+              </div>
+            </div>
+
+            <div class="cds--footer__social-row">
+              <a href="https://linkedin.com/company/speclar" target="_blank" rel="noopener noreferrer" class="cds--footer__social-btn" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Services Column -->
+          <div>
+            <h4 class="cds--footer__col-title">Offensive Security</h4>
+            <ul class="cds--footer__links">
+              <li><a href="vapt.html">Web Application VAPT</a></li>
+              <li><a href="vapt.html">Mobile Application Testing</a></li>
+              <li><a href="vapt.html">API & Microservices VAPT</a></li>
+              <li><a href="vapt.html">Cloud & Kubernetes Security</a></li>
+              <li><a href="vapt.html">Red Team Adversary Emulation</a></li>
+              <li><a href="vapt.html">Source Code Security Review</a></li>
+            </ul>
+          </div>
+
+          <!-- SOC & GRC Column -->
+          <div>
+            <h4 class="cds--footer__col-title">SOC & GRC</h4>
+            <ul class="cds--footer__links">
+              <li><a href="soc.html">24/7 Managed SOC</a></li>
+              <li><a href="soc.html">Incident Response Retainer</a></li>
+              <li><a href="grc.html">ISO/IEC 27001:2022 Audit</a></li>
+              <li><a href="grc.html">SOC 2 Type II Readiness</a></li>
+              <li><a href="grc.html">CERT-In Compliance & DPDPA</a></li>
+              <li><a href="grc.html">Virtual CISO (vCISO) Advisory</a></li>
+            </ul>
+          </div>
+
+          <!-- Company Column -->
+          <div>
+            <h4 class="cds--footer__col-title">About Speclar</h4>
+            <ul class="cds--footer__links">
+              <li><a href="about.html">Company Profile</a></li>
+              <li><a href="about.html#leadership">Ashwin Ragav (Founder)</a></li>
+              <li><a href="case-studies.html">Enterprise Case Studies</a></li>
+              <li><a href="contact.html">Global Contact Center</a></li>
+              <li><a href="speclar-bilateral-mnda.pdf" download="speclar-bilateral-mnda.pdf">Bilateral MNDA (PDF)</a></li>
+              <li><a href="speclar-pgp-key.asc" download="speclar-pgp-key.asc">Download PGP Key (.asc)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <!-- Bottom bar -->
+    <div class="cds--footer__bottom">
+      <div class="cds--grid">
+        <!-- Row 1: Brand Logo + Copyright & Legal Links -->
+        <div class="cds--footer__bottom-row">
+          <div class="cds--footer__bottom-brand">
+            <img src="speclar-logo.png" alt="SPECLAR Logo" class="speclar-bottom-logo" />
+            <span class="cds--footer__copyright">
+              © 2024–2026 SPECLAR CYBER TECHNOLOGIES PRIVATE LIMITED. ALL RIGHTS RESERVED. REGISTERED IN TAMIL NADU, INDIA.
+            </span>
+          </div>
+          <div class="cds--footer__legal-links">
+            <a href="javascript:void(0)" data-modal-target="privacy-modal" class="cds--footer__legal-link">Privacy & DPDPA</a>
+            <span class="cds--footer__divider">/</span>
+            <a href="javascript:void(0)" data-modal-target="terms-modal" class="cds--footer__legal-link">Terms of Engagement</a>
+            <span class="cds--footer__divider">/</span>
+            <a href="speclar-bilateral-mnda.pdf" download="speclar-bilateral-mnda.pdf" class="cds--footer__legal-link">Bilateral MNDA (PDF)</a>
+            <span class="cds--footer__divider">/</span>
+            <a href="speclar-pgp-key.asc" download="speclar-pgp-key.asc" class="cds--footer__legal-link">PGP Key (.asc)</a>
+          </div>
+        </div>
+
+        <div class="cds--footer__bottom-sep"></div>
+
+        <!-- Row 2: Compliance Seals & Global Dispatch -->
+        <div class="cds--footer__badges-row">
+          <div class="cds--footer__badges-left">
+            <span class="cds--footer__badges-label">AUDIT STANDARDS & ACCREDITATIONS:</span>
+            <div class="cds--footer__cert-badges">
+              <span class="cds--footer__cert-badge"><svg viewBox="0 0 16 16"><path d="M8 1a7 7 0 1 0 7 7 7 7 0 0 0-7-7zm3 5.4-3.7 3.7a.5.5 0 0 1-.7 0L5 8.5l.7-.7 1.3 1.3L10.3 5.7z"/></svg>OSCP CERTIFIED</span>
+              <span class="cds--footer__cert-badge"><svg viewBox="0 0 16 16"><path d="M8 1a7 7 0 1 0 7 7 7 7 0 0 0-7-7zm3 5.4-3.7 3.7a.5.5 0 0 1-.7 0L5 8.5l.7-.7 1.3 1.3L10.3 5.7z"/></svg>ISO/IEC 27001:2022</span>
+              <span class="cds--footer__cert-badge"><svg viewBox="0 0 16 16"><path d="M8 1a7 7 0 1 0 7 7 7 7 0 0 0-7-7zm3 5.4-3.7 3.7a.5.5 0 0 1-.7 0L5 8.5l.7-.7 1.3 1.3L10.3 5.7z"/></svg>SOC 2 TYPE II AUDIT</span>
+              <span class="cds--footer__cert-badge"><svg viewBox="0 0 16 16"><path d="M8 1a7 7 0 1 0 7 7 7 7 0 0 0-7-7zm3 5.4-3.7 3.7a.5.5 0 0 1-.7 0L5 8.5l.7-.7 1.3 1.3L10.3 5.7z"/></svg>CERT-IN ALIGNED</span>
+              <span class="cds--footer__cert-badge"><svg viewBox="0 0 16 16"><path d="M8 1a7 7 0 1 0 7 7 7 7 0 0 0-7-7zm3 5.4-3.7 3.7a.5.5 0 0 1-.7 0L5 8.5l.7-.7 1.3 1.3L10.3 5.7z"/></svg>INDIA DPDPA 2023 & GDPR</span>
+            </div>
+          </div>
+          <div class="cds--footer__dispatch-tag">
+            HEADQUARTERS: CHENNAI, TAMIL NADU · GLOBAL REMOTE DISPATCH
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       MODAL DIALOGS
+       ======================================================================== -->
+  <!-- Fast Scoping Modal -->
+  <div id="assessment-modal" class="cds--modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
+    <div class="cds--modal__container">
+      <div class="cds--modal__header">
+        <h3 id="modal-heading" class="cds--modal__title">Fast Scoping Call (Bilateral MNDA)</h3>
+        <button class="cds--modal__close" aria-label="Close dialog">✕</button>
+      </div>
+      <div class="cds--modal__body">
+        <p style="color: var(--cds-text-secondary); margin-bottom: 16px; font-size: 0.875rem;">
+          Schedule an immediate scoping call with our Lead Security Architects. We provide an executed Mutual Non-Disclosure Agreement prior to any technical discussions.
+        </p>
+        <div class="cds--form-group">
+          <label class="cds--label" for="mod-email">WORK EMAIL *</label>
+          <input type="email" id="mod-email" class="cds--text-input" placeholder="security@enterprise.com" required />
+        </div>
+        <div class="cds--form-group">
+          <label class="cds--label" for="mod-asset">DESIRED SERVICE PILLAR</label>
+          <select id="mod-asset" class="cds--select">
+            <option value="vapt">Offensive VAPT (Penetration Testing)</option>
+            <option value="soc">24/7 Managed SOC Telemetry</option>
+            <option value="grc">GRC (ISO 27001 / SOC 2 / CERT-In)</option>
+            <option value="all">Comprehensive Retainer (VAPT + SOC + GRC)</option>
+          </select>
+        </div>
+      </div>
+      <div class="cds--modal__footer">
+        <button class="cds--btn cds--btn--secondary" data-modal-close>Cancel</button>
+        <button class="cds--btn cds--btn--primary" data-modal-close>Request Call & MNDA</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Privacy Policy Modal -->
+  <div id="privacy-modal" class="cds--modal" role="dialog" aria-modal="true" aria-labelledby="privacy-heading">
+    <div class="cds--modal__container" style="max-width: 680px;">
+      <div class="cds--modal__header">
+        <h3 id="privacy-heading" class="cds--modal__title">Speclar Privacy & Data Protection Policy</h3>
+        <button class="cds--modal__close" aria-label="Close dialog">✕</button>
+      </div>
+      <div class="cds--modal__body" style="max-height: 60vh; overflow-y: auto; font-size: 0.8125rem; line-height: 1.6; color: var(--cds-text-secondary);">
+        <p><strong>Last Updated: October 2026 · Compliant with India DPDPA 2023, GDPR, and ISO/IEC 27701</strong></p>
+        <h4 style="color: var(--cds-text-primary); margin: 12px 0 4px;">1. Scope & Commitment</h4>
+        <p>Speclar Cyber Technologies Private Limited respects client and visitor confidentiality. We do not sell, rent, or monetize personal data or technical vulnerability findings. All client target artifacts, scope definitions, and telemetry data are encrypted at rest using AES-256 and PGP-protected in transit.</p>
+        <h4 style="color: var(--cds-text-primary); margin: 12px 0 4px;">2. Data Collected & Forensic Sanitization</h4>
+        <p>In the course of delivering VAPT and SOC services, transient technical artifacts (e.g. HTTP headers, memory dumps) are processed within isolated, air-gapped forensic environments and completely purged within 30 calendar days following final retest certification, unless otherwise required by contract.</p>
+        <h4 style="color: var(--cds-text-primary); margin: 12px 0 4px;">3. Data Protection Officer (DPO)</h4>
+        <p>For data rights or compliance queries: <code>ceo@speclar.com</code> / Speclar Cyber Technologies Pvt. Ltd., West Mambalam, Chennai, Tamil Nadu, 600033, India. Phone: +91 9345827775.</p>
+      </div>
+      <div class="cds--modal__footer">
+        <button class="cds--btn cds--btn--primary" data-modal-close>Acknowledge & Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Terms of Engagement Modal -->
+  <div id="terms-modal" class="cds--modal" role="dialog" aria-modal="true" aria-labelledby="terms-heading">
+    <div class="cds--modal__container" style="max-width: 680px;">
+      <div class="cds--modal__header">
+        <h3 id="terms-heading" class="cds--modal__title">Master Terms of Cybersecurity Engagement</h3>
+        <button class="cds--modal__close" aria-label="Close dialog">✕</button>
+      </div>
+      <div class="cds--modal__body" style="max-height: 60vh; overflow-y: auto; font-size: 0.8125rem; line-height: 1.6; color: var(--cds-text-secondary);">
+        <p><strong>Standard Professional Services Agreement (PSA / MSA Framework)</strong></p>
+        <h4 style="color: var(--cds-text-primary); margin: 12px 0 4px;">1. Authorization & Safe Harbor</h4>
+        <p>All offensive testing is conducted solely upon written authorization and mutual execution of a Statement of Work (SOW) and Bilateral MNDA. The Client confirms legal authority over the targeted IP addresses, domains, and applications.</p>
+        <h4 style="color: var(--cds-text-primary); margin: 12px 0 4px;">2. Non-Destructive Testing Guarantee</h4>
+        <p>Speclar tests exclusively through controlled exploit verification to prevent denial of service (DoS), production database corruption, or outage. High-impact exploit validations are coordinated with Client engineers in real time.</p>
+        <h4 style="color: var(--cds-text-primary); margin: 12px 0 4px;">3. Deliverables & Intellectual Property</h4>
+        <p>Final reports, remediation code snippets, and audit evidence become the exclusive proprietary property of the Client upon invoice fulfillment.</p>
+      </div>
+      <div class="cds--modal__footer">
+        <button class="cds--btn cds--btn--primary" data-modal-close>Close Terms</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="canvas-scene.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
